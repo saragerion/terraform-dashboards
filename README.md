@@ -12,7 +12,7 @@ You can install Terraform locally from the [official Terraform installation guid
 
 **AWS CLI**
 
-You can install the AWS CLI locally from the [official AWS installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+You can install the AWS CLI locally from the [official AWS installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).  
 Before you start, make sure that you are correctly authenticated:
 ```bash
 aws sts get-caller-identity
@@ -30,7 +30,7 @@ More information about CloudWatch dashboards can be found [here](https://docs.aw
 
 #### Deploy your dashboard
 
-Clone or fork this repository:
+Clone or fork this repository:  
 `git clone git@github.com:saragerion/terraform-dashboards.git`
 
 In the terminal, go into the cloudwatch folder:  
