@@ -33,20 +33,20 @@ More information about CloudWatch dashboards can be found [here](https://docs.aw
 Clone or fork this repository:
 `git clone git@github.com:saragerion/terraform-dashboards.git`
 
-In the terminal, go into the cloudwatch folder:
+In the terminal, go into the cloudwatch folder:  
 `cd terraform-dashboards/terraform/cloudwatch`
 
-Initialize the working directory containing Terraform configuration files:
+Initialize the working directory containing Terraform configuration files:  
 `terraform init`
 
-Validate the configuration files in the directory:
+Validate the configuration files in the directory:  
 `terraform validate`
 
-Create an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure:
+Create an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure:  
 `terraform plan`
 
-Execute the actions:
+Execute the actions:  
 `terraform apply`
 
-Optional: export an already existing CloudWatch dashboard to replicate it in Terraform 
+Optional - export an already existing CloudWatch dashboard to replicate it in Terraform:  
 `aws cloudwatch get-dashboard --dashboard-name my-existing-dashboard`
