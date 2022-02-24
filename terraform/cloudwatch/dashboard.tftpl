@@ -1,0 +1,55 @@
+{
+  "widgets":[
+    {
+      "height":6,
+      "width":6,
+      "y":0,
+      "x":0,
+      "type":"metric",
+      "properties":{
+        "view":"timeSeries",
+        "stacked":false,
+        "metrics":[
+          [
+            "ContainerInsights",
+            "pod_cpu_utilization",
+            "PodName",
+            "kube-proxy",
+            "ClusterName",
+            "PetSite",
+            "Namespace",
+            "kube-system"
+          ]
+        ],
+        "region":"${aws_region}"
+      }
+    },
+    {
+      "height":6,
+      "width":24,
+      "y":6,
+      "x":0,
+      "type":"log",
+      "properties":{
+        "query":"SOURCE '/aws/containerinsights/PetSite/application' | fields @timestamp, @message | sort @timestamp desc | filter @message like /PetListAdoptions/ | stats count(@message) by bin(5m) | limit 20    ",
+        "region":"${aws_region}",
+        "stacked":false,
+        "title":"Log group: /aws/containerinsights/PetSite/application",
+        "view":"timeSeries"
+      }
+    },
+    {
+      "height":6,
+      "width":24,
+      "y":12,
+      "x":0,
+      "type":"log",
+      "properties":{
+        "query":"SOURCE '/aws/containerinsights/PetSite/performance' | fields @timestamp, @message | sort @timestamp desc | limit 20",
+        "region":"${aws_region}",
+        "stacked":false,
+        "view":"table"
+      }
+    }
+  ]
+}
